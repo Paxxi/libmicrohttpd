@@ -33,6 +33,9 @@
 #include <sys/mman.h>
 #endif
 #ifdef _WIN32
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
 #include <windows.h>
 #endif
 #ifdef HAVE_SYSCONF
@@ -168,10 +171,17 @@ MHD_pool_create (size_t max)
                          -1,
                          0);
 #elif defined(_WIN32)
+#ifdef MS_APP
+    pool->memory = VirtualAllocFromApp (NULL,
+									    alloc_size,
+										MEM_COMMIT | MEM_RESERVE,
+										PAGE_READWRITE);
+#else
     pool->memory = VirtualAlloc (NULL,
                                  alloc_size,
                                  MEM_COMMIT | MEM_RESERVE,
                                  PAGE_READWRITE);
+#endif
 #endif /* _WIN32 */
   }
 #else  /* ! _WIN32 && ! MAP_ANONYMOUS */

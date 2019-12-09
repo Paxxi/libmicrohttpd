@@ -7,7 +7,6 @@ config.rpath
 /INSTALL
 /libmicrohttpd.pc
 /MHD_config.h.in
-/MHD_config.h
 /MHD_config.h.in~
 /configure.lineno
 /config.status.lineno
@@ -20,7 +19,6 @@ config.rpath
 /scripts
 /keys
 /doc.tmp
-/config.h
 /.project
 /config.guess
 /.cproject
@@ -49,3 +47,4 @@ po/configargs.stamp
 doc/libmicrohttpd.log
 src/examples/suspend_resume_epoll
 uncrustify.cfg
+build*/

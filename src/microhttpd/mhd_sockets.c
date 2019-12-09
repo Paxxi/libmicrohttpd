@@ -453,9 +453,11 @@ MHD_socket_noninheritable_ (MHD_socket sock)
                     flags | FD_CLOEXEC)) )
     return 0;
 #elif defined(MHD_WINSOCK_SOCKETS)
+#ifndef MS_APP
   if (! SetHandleInformation ((HANDLE) sock,
                               HANDLE_FLAG_INHERIT,
                               0))
+#endif
     return 0;
 #endif /* MHD_WINSOCK_SOCKETS */
   return ! 0;
@@ -483,7 +485,7 @@ MHD_socket_set_nodelay_ (MHD_socket sock,
     return setsockopt (sock,
                        IPPROTO_TCP,
                        TCP_NODELAY,
-                       (const void *) (on) ? &on_val : &off_val,
+                       (const void *) ((on) ? &on_val : &off_val),
                        sizeof (on_val));
   }
 #else
