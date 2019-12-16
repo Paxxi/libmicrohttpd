@@ -27,7 +27,7 @@ add_library(libmicrohttpd
   src/microhttpd/memorypool.c
   src/microhttpd/memorypool.h
   src/microhttpd/mhd_assert.h
-  src/microhttpd/mhd_bithelper.h
+  src/microhttpd/mhd_bithelpers.h
   src/microhttpd/mhd_byteorder.h
   src/microhttpd/mhd_compat.c
   src/microhttpd/mhd_compat.h
