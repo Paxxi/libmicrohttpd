@@ -14,8 +14,6 @@ add_library(libmicrohttpd
   src/microhttpd/base64.c
   src/microhttpd/base64.h
   src/microhttpd/basicauth.c
-  src/microhttpd/connection_https.c
-  src/microhttpd/connection_https.h
   src/microhttpd/connection.c
   src/microhttpd/connection.h
   src/microhttpd/daemon.c
