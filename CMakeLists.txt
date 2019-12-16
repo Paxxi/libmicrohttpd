@@ -14,6 +14,8 @@ add_library(libmicrohttpd
   src/microhttpd/base64.c
   src/microhttpd/base64.h
   src/microhttpd/basicauth.c
+  src/microhttpd/connection_https.c
+  src/microhttpd/connection_https.h
   src/microhttpd/connection.c
   src/microhttpd/connection.h
   src/microhttpd/daemon.c
@@ -24,6 +26,8 @@ add_library(libmicrohttpd
   src/microhttpd/md5.h
   src/microhttpd/memorypool.c
   src/microhttpd/memorypool.h
+  src/microhttpd/mhd_assert.h
+  src/microhttpd/mhd_bithelper.h
   src/microhttpd/mhd_byteorder.h
   src/microhttpd/mhd_compat.c
   src/microhttpd/mhd_compat.h
@@ -34,6 +38,8 @@ add_library(libmicrohttpd
   src/microhttpd/mhd_locks.h
   src/microhttpd/mhd_mono_clock.c
   src/microhttpd/mhd_mono_clock.h
+  src/microhttpd/mhd_send.c
+  src/microhttpd/mhd_send.h
   src/microhttpd/mhd_sockets.c
   src/microhttpd/mhd_sockets.h
   src/microhttpd/mhd_str.c
@@ -44,6 +50,8 @@ add_library(libmicrohttpd
   src/microhttpd/reason_phrase.c
   src/microhttpd/response.c
   src/microhttpd/response.h
+  src/microhttpd/sha256.c
+  src/microhttpd/sha256.h
   src/microhttpd/sysfdsetsize.c
   src/microhttpd/sysfdsetsize.h
   src/microhttpd/tsearch.c
