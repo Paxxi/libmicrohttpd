@@ -34,7 +34,6 @@
 #include "connection.h"
 #include "memorypool.h"
 #include "mhd_limits.h"
-#include "autoinit_funcs.h"
 #include "mhd_mono_clock.h"
 #if defined(MHD_USE_POSIX_THREADS) || defined(MHD_USE_W32_THREADS)
 #include "mhd_locks.h"

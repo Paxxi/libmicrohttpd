@@ -7,7 +7,6 @@ if(MSVC)
 endif()
 
 add_library(libmicrohttpd
-  src/include/autoinit_funcs.h
   src/include/mhd_options.h
   src/include/microhttpd.h
   src/include/platform.h
