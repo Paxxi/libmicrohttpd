@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(libmicrohttpd LANGUAGES C VERSION 0.9.68)
+project(libmicrohttpd LANGUAGES C VERSION 0.9.69)
 
 if(MSVC)
   set(CMAKE_DEBUG_POSTFIX "_d")
